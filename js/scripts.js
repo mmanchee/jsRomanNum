@@ -1,28 +1,46 @@
 function numerals(input) {
+  
   const numerals = ["I", "V", "X", "L", "C", "D", "M"];
   let numbers = input.split("").reverse();
-  let output;
+  let output = "";
 
-  for (const number of numbers) {
-    
-    if (number < 4) {
-      for (let i = 0; i <= number; i++) {
-        output += numerals[0];
+  for (let i = 0; i < numbers.length; i++) {
+
+    let num = parseInt(numbers[i]);
+    if (num < 4) {
+      //alert("in3");
+      for (let i = 1; i <= num; i++) {
+        output = output + numerals[0];
+        //alert(output);
       }
-    } else if (number === 4) {
+    } else if (num === 4) {
+      //alert("in4");
       output = numerals[0] + numerals[1];
-    } else if (number < 9) {
-      output = numerals[1]
-      number -= 5;
-      for (let i = 0; i <= number; i++) {
-        output += numerals[0];
+      //alert(output);
+    } else if (num < 9) {
+      //alert("in5");
+      output = output + numerals[1];
+      num = num - 5;      
+      //alert("o= " + output + " n= " + num);
+      for (let i = 1; i <= num; i++) {
+        output = output + numerals[0];
+        
       }
+      //alert(output);
     } else {
+      //alert("in9");
       output = numerals[0] + numerals[2];
+      //alert(output);
     }  
-    number = output;  
+    //alert(output);
+    numbers[i] = output; 
+   // alert(numbers); 
   }
-  const result = numbers.reverse().join("");
+  //alert("out " + numbers); 
+  numbers = numbers.reverse();
+  //alert("r " + numbers);
+  let result = numbers.join("");
+  //alert("j " + numbers);
 
   return result;
 }
@@ -30,10 +48,9 @@ function numerals(input) {
 $(document).ready(function() {
   $("#form-inputs1").submit(function(event) {
       event.preventDefault();
-    let input = parseInt($("input#input1").val());
-
+    let input = $("input#input1").val();
     const roman = numerals(input);
-
-    $("#result").text(roman);
+    //alert(roman);
+    $("#result1").text(roman);
   });
 });
