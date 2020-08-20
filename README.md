@@ -6,7 +6,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+Take any number equal to 1 but less then 3,999 and convert it into roman numerals.
 
 ## Setup/Installation Requirements
 
@@ -17,6 +17,11 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 * _format_
 
 _{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+
+## TTD Steps
+
+  Overall concept - 
+ [] - Take the ones place, identify and convert to roman numerals.
 
 ## Known Bugs
 
