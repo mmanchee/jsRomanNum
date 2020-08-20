@@ -1,40 +1,35 @@
 function numerals(input) {
   
-  const numerals = ["I", "V", "X", "L", "C", "D", "M"];
+  const numerals = ["I", "X", "C", "M"];
+  const numerals5 = ["V", "L", "D", "Z"];
   let numbers = input.split("").reverse();
   let output = "";
 
   for (let i = 0; i < numbers.length; i++) {
-
+    //alert(i);
+    output = "";
     let num = parseInt(numbers[i]);
     if (num < 4) {
-      //alert("in3");
-      for (let i = 1; i <= num; i++) {
-        output = output + numerals[0];
-        //alert(output);
+      for (let e = 1; e <= num; e++) {
+        output = output + numerals[i];
       }
+      //alert("1i " + numbers + " o= " + output);
     } else if (num === 4) {
-      //alert("in4");
-      output = numerals[0] + numerals[1];
-      //alert(output);
+      output = numerals[i] + numerals5[i];
+      //alert("4i " + numbers + " o= " + output);
     } else if (num < 9) {
-      //alert("in5");
-      output = output + numerals[1];
-      num = num - 5;      
-      //alert("o= " + output + " n= " + num);
-      for (let i = 1; i <= num; i++) {
-        output = output + numerals[0];
-        
+      output = output + numerals5[i];
+      num = num - 5; 
+      //alert("5+i " + numbers + " n= " + num + " r1= " + numerals[i] + " r2= " + numerals5[i]);
+      for (let e = 1; e <= num; e++) {
+        output = output + numerals[i];
       }
-      //alert(output);
+      //alert("5i " + numbers + " o= " + output);
     } else {
-      //alert("in9");
-      output = numerals[0] + numerals[2];
-      //alert(output);
+      output = numerals[i] + numerals[i + 1];
+      //alert("9i " + numbers + " o= " + output);
     }  
-    //alert(output);
     numbers[i] = output; 
-   // alert(numbers); 
   }
   //alert("out " + numbers); 
   numbers = numbers.reverse();
