@@ -20,8 +20,9 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## TTD Steps
 
-  Overall concept - 
- [] - Take the ones place, identify and convert to roman numerals.
+ [x] - Take the ones place, identify and convert to roman numerals.
+ [x] - Take all other places, and convert.
+ [x] - Handle any unexpected/wanted inputs.
 
 ## Known Bugs
 

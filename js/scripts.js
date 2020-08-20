@@ -38,9 +38,9 @@ $(document).ready(function() {
     let roman;
 
     if (isNaN(input)) {
-      roman = "Please enter a number."
-    } else{
-      const roman = numerals(input);
+      roman = "Please enter a number.";
+    } else {
+      roman = numerals(input);
     }
     
     $("#result1").text(roman);
